@@ -1,9 +1,9 @@
 const express =require('express');
 const mongoose = require('mongoose');
 const app = express();
-
+require("dotenv").config();
 const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGODB_URI || "mongodb://localhost/googlebooks";
+const MONGO_URI = process.env.MONGODB_URI;
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.static("./client/"));
